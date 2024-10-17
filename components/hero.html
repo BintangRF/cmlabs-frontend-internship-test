@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .animated-text {
+        overflow: hidden;
+        border-right: 0.15em solid;
+        white-space: nowrap;
+        margin: 0 auto;
+        letter-spacing: 0.13em;
+        animation: typing 3.5s steps(35, end),
+          blink-caret 0.75s step-end infinite;
+        color: #ffd700;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: black;
+        }
+      }
+
+      .hero {
+        background-image: url("https://images.unsplash.com/photo-1463740839922-2d3b7e426a56");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 5rem 0;
+        position: relative;
+        margin-top: 3rem;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="hero hero-fluid text-white">
+      <div class="container hero-content text-center">
+        <h1 class="display-4">Welcome to Meal App</h1>
+        <p class="lead animated-text">
+          Discover delicious recipes from around the world, save your favorites,
+          and get inspired every day!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

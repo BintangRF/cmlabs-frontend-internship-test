@@ -1,0 +1,110 @@
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.content {
+  min-height: 100vh;
+}
+
+/* Card */
+.card {
+  margin: 1rem 0 1rem 0;
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card {
+  position: relative;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.card-body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  color: #ffd700;
+}
+
+.card-title {
+  font-size: 1.8rem;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* Pagination */
+#pagination-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page-item {
+  margin: 0 5px;
+}
+
+.page-item a {
+  display: block;
+  padding: 10px 15px;
+  color: #ffd700;
+  background-color: #4caf50;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.page-item.active a {
+  background-color: #ffd700;
+  color: #4caf50;
+}
+
+.page-item a:hover {
+  background-color: #45a049;
+  color: white;
+}
+
+/* Button */
+.btn {
+  border-color: #ffd700;
+  border-width: 2px;
+  background-color: transparent;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn.filled {
+  background-color: #ffd700;
+  color: white;
+}
